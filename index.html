@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Task 1 </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="checkout">
+        <h1>Credit Card Details</h1>
+        <div class="card-number" id="card-container">
+                <form class="form" onsubmit="add(event)" >
+                <div class="input-div">
+                    <label for="input"> Card Number: </label>
+                    <span>
+                        <input 
+                        type="text" 
+                        class="input" 
+                        name="input1" 
+                        id="input1"
+                        placeholder="0000" 
+                        size="5"
+                        maxlength = "4" 
+                        pattern="[0-9]{4}"
+                        onkeyup="movetoNext(this, 'input2')"
+                            >
+                    </span>
+                    <span>
+                        <input 
+                        type="text" 
+                        class="input" 
+                        name="input2" 
+                        id="input2"
+                        placeholder="0000" 
+                        size="5"
+                        minlength="0"
+                        maxlength = "4" 
+                        pattern="[0-9]{4}"
+                        onkeyup="movetoNext(this, 'input3'), movetoPrev(this, 'input1')"
+                        >
+                    </span>
+                    <span>
+                        <input 
+                        type="text" 
+                        class="input" 
+                        name="input3" 
+                        id="input3"
+                        placeholder="0000" 
+                        size="5"
+                        minlength="0"
+                        maxlength = "4" 
+                        pattern="[0-9]{4}"
+                        onkeyup="movetoNext(this, 'input4'),movetoPrev(this, 'input2')"
+                        >
+                    </span>
+                    <span>
+                        <input 
+                        type="text" 
+                        class="input" 
+                        name="input4"
+                        id="input4" 
+                        placeholder="0000" 
+                        size="6"
+                        minlength="0"
+                        maxlength = "4" 
+                        pattern="[0-9]{4}"
+                        onkeyup="movetoPrev(this, 'input3')">
+                    </span>
+                </div>
+                <div class="cardholder-div">
+                    <label for="cardholder">CardHolder Name:</label>
+                    <input type="text" name="cardholder" class="cardholder-name" placeholder="default name">
+                </div>
+                    <span class="expiry-div">
+                        <label for="">Expiration Date:</label>
+                        <input type="number" name="expirymonth" placeholder="MM" min="01" max="12">
+                        <input type="number" name="expiryyear" placeholder="YYYY" min="2021" max="2100">
+                    </span>
+                    <span class="CVV">
+                        <label for="cvv">CVV: </label>
+                        <input type="text" name="cvv" class="user-cvv" placeholder="000"  maxlength="3" pattern="[0-9]{3}">
+                    </span>
+                <input type="submit" class="submit-button" >
+                </form>
+        </div>
+    </div>
+    <div id="resultContainer">
+        <h1>Card Numbers</h1>
+        <div id="resultBox"></div>
+    </div>
+</body>
+</html>
