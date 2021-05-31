@@ -13,7 +13,6 @@ let array = [];
         }
         function showRes (){
             let divHtml = '';
-
             array.forEach(function(val,index){
             divHtml += ` <ul>
             <li id="list-tag">${val.cardnumber[0]} ${val.cardnumber[1]} ${val.cardnumber[2]} ${val.cardnumber[3]}

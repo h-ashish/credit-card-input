@@ -1,5 +1,5 @@
 {
-  "name": "FrontEnd-Task1",
+  "name": "Credit-Card-Input",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://h-ashish.github.io/frontend-task1",
+  "homepage": "https://h-ashish.github.io/credit-card-input",
   "devDependencies": {
     "gh-pages": "^3.1.0"
   }
